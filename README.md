@@ -1,75 +1,33 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Draw
+Website that uses webrtc to connect two users and allow them to draw real time.
 
-Currently, two official plugins are available:
+## Tutorial
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A user can create a room, while another can join the room. The host clicks Offer, which copies the offer to the clipboard. The client then clicks Offer, which reads the offer from the clipboard and generates an Answer, also copied to the clipboard. The host clicks the Answer button to read the answer from the clipboard. Once both the offer and answer are set, the host can click Start to begin the drawing session.
 
-## React Compiler
+If the client and host are not on the same computer, the offer and answer must be shared through a third party.
+## Appearance
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+Home page:
 
-Note: This will impact Vite dev & build performances.
+<img width="900" height="600" alt="image" src="https://github.com/user-attachments/assets/5e2efb6f-669b-4145-a48f-25fa82013b43" />
 
-## Expanding the ESLint configuration
+Create room:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+<img width="521" height="524" alt="image" src="https://github.com/user-attachments/assets/1c7860ba-b241-4cf9-919d-5db52d1f4b2a" />
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Join room:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+<img width="408" height="254" alt="image" src="https://github.com/user-attachments/assets/5cda5913-e70a-4e88-8367-b82a4fe38c24" />
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Drawing on both host and user:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+<img width="900" height="600" alt="image" src="https://github.com/user-attachments/assets/7143c4a8-5a76-4353-a17b-3129dd3fbb1e" />
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Not Supported
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Mobile devices
+- Different canvas sizes between users
+- Rescaling or moving the canvas
+
