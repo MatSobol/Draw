@@ -1,0 +1,18 @@
+.container {
+  box-sizing: border-box;
+  padding: 16px 64px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.icon {
+  font-size: 50px;
+  color: blue;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.container button {
+  margin-left: auto !important;
+}

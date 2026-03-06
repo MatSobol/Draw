@@ -1,0 +1,6 @@
+.offerContainer {
+  display: flex;
+  align-items: center;
+  font-size: 52px;
+  gap: 30px;
+}

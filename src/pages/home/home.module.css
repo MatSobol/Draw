@@ -1,0 +1,30 @@
+.container {
+  width: 100%;
+  margin-top: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.button {
+  width: 350px;
+}
+
+.welcomeText {
+  font-size: 100px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.describeText {
+  margin-top: -15px;
+  font-size: 30px;
+  color: #666;
+}
+
+.buttonContainer button:first-child {
+  margin-bottom: 30px;
+}
